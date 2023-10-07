@@ -11,6 +11,10 @@ git clone https://github.com/Ossowitz/SeverstalNoteTask.git
 ```
 
 ```shell
+mvn deploy
+```
+
+```shell
 # You must have Docker in machine
 docker-compose up
 ```
@@ -19,24 +23,24 @@ _Open in browser_ http://localhost/
 
 ### Instructions
 
-![img.png](img.png)
+![img.png](photos/img.png)
 
 After success registration join to Login page:
 
-![img_1.png](img_1.png)
+![img_1.png](photos/img_1.png)
 
-![img_2.png](img_2.png)
+![img_2.png](photos/img_2.png)
 
 Ability to view the list of notes and add a new one:
 
-![img_3.png](img_3.png)
+![img_3.png](photos/img_3.png)
 
 Ability to edit:
 
-![img_4.png](img_4.png)
+![img_4.png](photos/img_4.png)
 
 Ability to delete:
 
-![img_5.png](img_5.png)
+![img_5.png](photos/img_5.png)
 
-![img_6.png](img_6.png)
+![img_6.png](photos/img_6.png)
