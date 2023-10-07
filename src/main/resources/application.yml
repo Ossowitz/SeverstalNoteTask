@@ -7,11 +7,11 @@ spring:
     show-sql: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.HSQLDialect
         format_sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/severstal
-    username: severstal
+    url: jdbc:hsqldb:mem:severstal
+    username: sa
     password: severstal
   liquibase:
     enabled: true
