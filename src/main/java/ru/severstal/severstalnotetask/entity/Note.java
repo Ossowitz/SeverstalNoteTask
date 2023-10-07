@@ -7,7 +7,6 @@ import lombok.*;
 @Table(name = "notes")
 @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@ToString(callSuper = true)
 public class Note extends NamedEntity {
 
     @Column(name = "description")
@@ -17,4 +16,13 @@ public class Note extends NamedEntity {
     @JoinColumn(name = "user_id", nullable = false)
     @OrderColumn
     private User user;
+
+    @Override
+    public String toString() {
+        return "Note{" +
+               "description='" + description + '\'' +
+               ", name='" + name + '\'' +
+               ", id=" + id +
+               '}';
+    }
 }

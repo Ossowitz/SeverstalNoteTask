@@ -52,8 +52,4 @@ public abstract class BaseEntity implements Persistable<Integer>, HasId {
         return id == null ? 0 : id;
     }
 
-    @Override
-    public String toString() {
-        return getClass().getSimpleName() + ":" + id;
-    }
 }

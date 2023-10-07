@@ -93,7 +93,6 @@ public class UserController {
 
 	@GetMapping("/deleteNotes/{id}")
 	public String deleteNotes(@PathVariable int id, HttpSession session) {
-		log.info("delete note: {}", noteService.deleteNotes(id));
 		boolean deleteNotes = noteService.deleteNotes(id);
 		if (deleteNotes) {
 			session.setAttribute("msg", "Delete success");
