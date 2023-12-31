@@ -6,16 +6,16 @@ import lombok.*;
 @Entity
 @Table(name = "notes")
 @Getter @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class Note extends NamedEntity {
 
     @Column(name = "description")
-    private String description;
+    public String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     @OrderColumn
-    private User user;
+    public User user;
 
     @Override
     public String toString() {

@@ -13,22 +13,22 @@ import java.util.Set;
 		uniqueConstraints = @UniqueConstraint(columnNames = {"email"},
 				name = "notes_unique_email_idx"))
 @Getter @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class User extends NamedEntity {
 
 	@Column(name = "email")
-	private String email;
+	public String email;
 
 	@Column(name = "address")
-	private String address;
+	public String address;
 
 	@Column(name = "password")
-	private String password;
+	public String password;
 
 	@Column(name = "role")
-	private String role;
+	public String role;
 
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	private List<Note> notes;
+	public List<Note> notes;
 }

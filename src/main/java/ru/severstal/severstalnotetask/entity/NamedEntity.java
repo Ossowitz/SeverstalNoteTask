@@ -11,14 +11,14 @@ import lombok.Setter;
 @MappedSuperclass
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public abstract class NamedEntity extends BaseEntity {
 
     @NotBlank
     @Column(name = "name", nullable = false)
-    protected String name;
+    public String name;
 
-    protected NamedEntity(Integer id, String name) {
+    public NamedEntity(Integer id, String name) {
         super(id);
         this.name = name;
     }
